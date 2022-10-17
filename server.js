@@ -9,10 +9,10 @@ server.use(express.json());
 
 server.use(cors());
 
-server.use('/dogs', dogsMiddlew);
-server.use('/temperaments', tempsMiddlew);
+server.use('/api/dogs', dogsMiddlew);
+server.use('/api/temperaments', tempsMiddlew);
 
-server.get("/", (req, res) => {
+server.get("/api", (req, res) => {
     res.send("HOLAAAAA")
 });
 
