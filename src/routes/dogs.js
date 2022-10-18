@@ -37,6 +37,10 @@ router.get("/", async(req, res) => {
     }
 });
 
+router.get("/prueba/imagenes", async(req, res) => {
+    res.send("sexo")
+})
+
 // router.post("/prueba/imagenes", upload.single("image"), async(req, res) => {
 //     return res.send("hola")
 // })
