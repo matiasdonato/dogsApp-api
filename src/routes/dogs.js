@@ -42,7 +42,12 @@ router.get("/prueba/imagenes", async(req, res) => {
 })
 
 router.post("/prueba/imagenes", upload.single("image"), async(req, res) => {
-    return res.send("hola")
+    try {
+        return res.send("hola")
+    } catch (err) {
+        return res.send(err)
+    }
+
 })
 
 router.get("/:idRaza", async(req, res) => {
