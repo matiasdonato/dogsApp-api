@@ -63,8 +63,6 @@ router.post("/", upload.single("image"), async(req, res) => {
         return res.status(404).send("Falta enviar datos obligatorios")
     }
 
-    return res.send(req.file)
-
     let dogs = await Breed.findAll();
 
     let image
