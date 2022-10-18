@@ -45,19 +45,6 @@ router.post("/prueba/imagenes", upload.single("image"), async(req, res) => {
     return res.send("hola")
 })
 
-router.get("/images", (req, res) => {
-    // let image = req.params.imageName
-    fs.readFile(`./src/routes/teckel-perro-salchicha-mira-adelante-aislado-sobre-fondo-blanco_104627-2781.webp`, (err, data) => {
-        if (err) {
-            console.log(err)
-            res.send(err)
-        } else {
-            res.setHeader("Content-Type", "image/jpg")
-            res.send(data)
-        }
-    })
-})
-
 router.get("/:idRaza", async(req, res) => {
     let id = req.params.idRaza;
     let dog = await Breed.findAll({
@@ -118,7 +105,18 @@ router.post("/", upload.single("image"), async(req, res) => {
     res.status(200).json(newBreed);
 })
 
-
+router.get("/images/:imageName", (req, res) => {
+    let image = req.params.imageName
+    fs.readFile(`./src/storage/imgs/${image}`, (err, data) => {
+        if (err) {
+            console.log(err)
+            res.send(err)
+        } else {
+            res.setHeader("Content-Type", "image/jpg")
+            res.send(data)
+        }
+    })
+})
 
 
 
