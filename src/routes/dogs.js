@@ -101,6 +101,7 @@ router.get("/images/:imageName", (req, res) => {
     let image = req.params.imageName
     fs.readFile(`../storage/imgs/${image}`, (err, data) => {
         if (err) {
+            console.log(err)
             res.send("no se encontro la imagen")
         } else {
             res.setHeader("Content-Type", "image/jpg")
