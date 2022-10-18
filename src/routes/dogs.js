@@ -1,7 +1,7 @@
 let { Router } = require("express");
 const { Op } = require("sequelize");
 let router = Router();
-let { Breed, Temper } = require("../../db/index.js");
+let { Breed, Temper } = require("../db/index.js");
 let upload = require("../storage/storage.js");
 let fs = require("fs")
 

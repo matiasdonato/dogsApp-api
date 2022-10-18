@@ -1,6 +1,6 @@
 let { Router } = require("express");
 let router = Router();
-let { Temper } = require("../../db/index.js");
+let { Temper } = require("../db/index.js");
 let axios = require("axios")
 
 

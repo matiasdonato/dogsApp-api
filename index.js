@@ -1,5 +1,5 @@
 let app = require("./src/server");
-let { db } = require("./db/index.js")
+let { db } = require("./src/db/index.js")
 let PORT = 3001;
 
 
