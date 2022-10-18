@@ -13,7 +13,7 @@ let modelTemper = require("./models/Temper.js")
 //     }
 // });
 
-const db = new Sequelize('postgres://matiasdonato:dona090504:5432/dogs', {
+const db = new Sequelize('postgres://matiasdonato:dona090504@localhost/dogs', {
     logging: false,
 });
 
