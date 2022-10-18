@@ -37,6 +37,10 @@ router.get("/", async(req, res) => {
     }
 });
 
+// router.post("/prueba/imagenes", upload.single("image"), async(req, res) => {
+//     return res.send("hola")
+// })
+
 router.get("/:idRaza", async(req, res) => {
     let id = req.params.idRaza;
     let dog = await Breed.findAll({
@@ -109,6 +113,8 @@ router.get("/images/:imageName", (req, res) => {
         }
     })
 })
+
+
 
 
 
