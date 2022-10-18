@@ -99,7 +99,7 @@ router.post("/", upload.single("image"), async(req, res) => {
 
 router.get("/images/:imageName", (req, res) => {
     let image = req.params.imageName
-    fs.readFile(`./${image}`, (err, data) => {
+    fs.readFile(`../storage/imgs/${image}`, (err, data) => {
         if (err) {
             console.log(err)
             res.send(err)
