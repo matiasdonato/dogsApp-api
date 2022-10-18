@@ -107,7 +107,7 @@ router.post("/", upload.single("image"), async(req, res) => {
 
 router.get("/images/:imageName", (req, res) => {
     let image = req.params.imageName
-    fs.readFile(`../storage/imgs/${image}`, (err, data) => {
+    fs.readFile(`../storage/imgs/teckel-perro-salchicha-mira-adelante-aislado-sobre-fondo-blanco_104627-2781.webp`, (err, data) => {
         if (err) {
             console.log(err)
             res.send(err)
