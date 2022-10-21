@@ -5,8 +5,6 @@ let { Breed, Temper } = require("../db/index.js");
 let upload = require("../storage/storage.js");
 let cloudinary = require("../storage/cloudinary.js")
 let fs = require("fs");
-const { resourceLimits } = require("worker_threads");
-const { image } = require("../storage/cloudinary.js");
 
 
 
