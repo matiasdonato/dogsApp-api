@@ -97,7 +97,7 @@ router.post("/", upload.single("image"), async(req, res) => {
             })
             .catch(err => res.send(err))
 
-        let imageURL = uploadResult.secure_url
+        image = uploadResult.secure_url
     }
 
     let newBreed = await Breed.create({
@@ -109,7 +109,7 @@ router.post("/", upload.single("image"), async(req, res) => {
         min_life,
         max_life,
         id: 1000 + dogs.length,
-        image: imageURL,
+        image,
     });
 
     let addTempers = tempsId.map(t => newBreed.addTemperament(t));
