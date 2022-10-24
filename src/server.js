@@ -6,6 +6,7 @@ let cors = require("cors");
 let server = express();
 
 server.use(express.json());
+
 server.use(cors());
 
 server.use('/dogs', dogsMiddlew);
